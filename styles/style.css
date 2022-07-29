@@ -1,0 +1,244 @@
+@font-face {
+    font-family: 'Heebo Regular';
+    src: url(../fonts/Heebo-Regular.ttf);
+}
+@font-face {
+    font-family: 'Heebo Bold';
+    src: url(../fonts/Heebo-Bold.ttf);
+}
+@font-face {
+    font-family: 'Heebo Medium';
+    src: url(../fonts/Heebo-Medium.ttf);
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    color: #21243D;
+    overflow-x: hidden;
+}
+
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+}
+.menu_box{
+    width: 30%;
+    height: 80px;
+}
+.menu{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 10%;
+}
+.menu_link{
+    font-family: 'Heebo Medium';
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+    font-size: 20px;
+}
+.menu_link:hover{
+    transition: .2s;
+    color: rgba(255, 100, 100, 1);
+}
+.blog_subtitle h1{
+    font-size: 44px;
+    font-family: 'Heebo Bold';
+    line-height: 60px;
+}
+.blog_card{
+    width: 90%;
+    display: grid;
+    grid-template-rows:repeat(3, 30%) ;
+    border-bottom: 0.1px #E0E0E0 solid ;
+}
+.blog_card h2{
+    font-family: 'Heebo Medium';
+    font-size: 30px;
+}
+.blog_card p{
+    font-family: 'Heebo Regular';
+    font-size: 16px;
+    line-height: 23.5px;
+}
+.container{
+    width: 70%;
+    margin: 0 auto;
+}
+.blog_card_inner{
+    display: flex;
+    font-family: 'Heebo Regular';
+    align-items: center;
+}
+.blog_card_inner h3{
+    font-family: 'Heebo Regular';
+    font-size: 20px;
+    line-height: 30px;
+}
+.blog_card_inner h3:last-child{
+    color: rgba(134, 149, 164, 1);
+    padding-left: 3%;
+}
+.blog_card_inner h3:first-child{
+    padding-right: 3%;
+    border-right: 1px solid #000000;
+}
+footer{
+    margin-top: 10%;
+    height: 40vh;
+    display: grid;
+   
+}
+
+.footer_box{
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(2, 50%);
+}
+.social_media{  
+    width: 60%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+.fa-facebook-official:hover{
+    color: blue;
+}
+.fa-instagram:hover{
+    color: orangered;
+}
+.fa-twitter:hover{
+    color: aqua;
+}
+.fa-linkedin-square:hover{
+    color: #104df7;
+}
+.social_media i{
+    font-size: 50px;
+    color: #000000;
+}
+.social_media i:hover{
+    transition: .2s;
+}
+.footer_authors{
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+.burger{
+    display: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    width: 50px;
+    height: 30px;
+    right: 0;
+}
+.burger::before,
+.burger::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    right: 0;
+}
+.burger::before{
+    top: 0;
+}
+.burger::after{
+    bottom: 0;
+}
+
+.burger_line{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(700%);
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+}
+
+@media (max-width:767.9px){
+    header{
+        width: 90%;
+    }
+    .container{
+        width: 90%;
+    }
+    .menu_box{
+        width: 40%;
+        position: fixed;
+        right: 0;
+        z-index: 100;
+        top: 63px;
+        background-color:white ;
+        padding: 30px;
+        transform: translateX(100%);
+        transition: .5s ;
+        height: 55vh;
+    }
+    .menu--visible{
+        transform: none;
+    }
+    .burger{
+        display: block;
+    }
+    .menu{
+        display:grid ;
+        grid-template-rows: repeat(3, 60%);
+        height: fit-content;
+    }
+    p{
+        font-size: 20px;
+    }
+    .menu_link{
+        font-size: 30px;
+        border-bottom: 1px solid gray;
+        padding-bottom: 10px;
+    }
+}
+@media (max-width:424.9px){
+    .blog_card{
+        display: grid;
+        margin-bottom: 10%;
+    }
+    .blog_card img {
+        height: 100%;
+        width: 100%;
+    }
+    .second_card_btn{
+        width: 100%;
+        margin-bottom: 10%;
+    }
+    .second_card_title {
+        width: 100%;
+        margin: 0;
+    }
+    .work_subtitle h1 {
+        margin-left: 5%;
+    }
+    .social_media {
+            width: 100%;
+    }
+    p{
+        margin: 0;
+        padding: 0;
+    }
+    
+}
